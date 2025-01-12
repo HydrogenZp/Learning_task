@@ -50,6 +50,7 @@
   <!--   <doc_depend>doxygen</doc_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>roslaunch</build_depend>
+  <exec_depend>controller_manager</exec_depend>
 <!--
   <run_depend>xacro</run_depend>
 -->

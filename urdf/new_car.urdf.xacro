@@ -64,8 +64,8 @@
 
     <gazebo reference="car_link">
         <material>Gazebo/SkyBlue</material>
-        <mu1>0.7</mu1>
-        <mu2>0.7</mu2>
+        <mu1>10000</mu1>
+        <mu2>10000</mu2>
     </gazebo>
 
 
@@ -93,14 +93,14 @@
 
         <gazebo reference="${wheel_name}">
             <material>Gazebo/Black</material>
-            <mu1>0.7</mu1>            <!--静摩擦-->
-            <mu2>0.7</mu2>            <!--动摩擦-->
+            <mu1>100000</mu1>            <!--静摩擦-->
+            <mu2>100000</mu2>            <!--动摩擦-->
         </gazebo>
 <!--传动-->
         <transmission name="${wheel_name}_transmission">
             <type>transmission_interface/SimpleTransmission</type>
             <joint name="car_base_${wheel_name}">
-                <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+                <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
             </joint>
             <actuator name="${wheel_name}_motor">
                 <mechanicalReducction>1</mechanicalReducction><!--传动比定为1-->
@@ -119,5 +119,9 @@
         <parent link="base_link"/>
         <child link="car_link"/>
     </joint>
-
+<gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+        <robotNamespace>/</robotNamespace>
+    </plugin>
+</gazebo>
 </robot>
