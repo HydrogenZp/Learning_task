@@ -8,3 +8,6 @@
 - [分析力学（Latex练习）](./分析力学（练latex的）.md)
 
 - [Clang-format(Todo)](./Clang-format.md)
+
+- [在Ubuntu中配置Zsh](./在Ubuntu中使用Zsh.md)
+
