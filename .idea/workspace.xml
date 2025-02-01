@@ -19,10 +19,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="901fcd35-48a1-4199-aa05-631f18313864" name="更改" comment="Fix package errors.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/learning_task" beforeDir="false" />
-    </list>
+    <list default="true" id="901fcd35-48a1-4199-aa05-631f18313864" name="更改" comment="Fix package errors." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,6 +78,7 @@
       <workItem from="1738417422563" duration="939000" />
       <workItem from="1738418366909" duration="96000" />
       <workItem from="1738418513862" duration="160000" />
+      <workItem from="1738418680322" duration="385000" />
     </task>
     <task id="LOCAL-00001" summary="Upload the workspace to a GitHub repository instead of a package.">
       <option name="closed" value="true" />
@@ -90,7 +88,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738417629100</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fix package errors.">
+      <option name="closed" value="true" />
+      <created>1738418706207</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1738418706207</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
