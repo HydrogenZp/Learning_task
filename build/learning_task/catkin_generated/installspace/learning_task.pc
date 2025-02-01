@@ -1,0 +1,8 @@
+prefix=/home/hyd/Learning_task/install
+
+Name: learning_task
+Description: Description of learning_task
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
