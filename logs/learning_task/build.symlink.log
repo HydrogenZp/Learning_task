@@ -1,3 +1,3 @@
-Linked: (/home/hyd/Learning_task/devel/.private/learning_task/lib/pkgconfig/learning_task.pc, /home/hyd/Learning_task/devel/lib/pkgconfig/learning_task.pc)
-Linked: (/home/hyd/Learning_task/devel/.private/learning_task/share/learning_task/cmake/learning_taskConfig.cmake, /home/hyd/Learning_task/devel/share/learning_task/cmake/learning_taskConfig.cmake)
-Linked: (/home/hyd/Learning_task/devel/.private/learning_task/share/learning_task/cmake/learning_taskConfig-version.cmake, /home/hyd/Learning_task/devel/share/learning_task/cmake/learning_taskConfig-version.cmake)
+Symlinking /home/hyd/Learning_task/devel/lib/pkgconfig/learning_task.pc
+Symlinking /home/hyd/Learning_task/devel/share/learning_task/cmake/learning_taskConfig.cmake
+Symlinking /home/hyd/Learning_task/devel/share/learning_task/cmake/learning_taskConfig-version.cmake

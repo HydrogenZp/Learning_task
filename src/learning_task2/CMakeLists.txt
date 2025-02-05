@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(learning_task2)
+project(power_machine_controller)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -111,10 +111,29 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES learning_task2
-#  CATKIN_DEPENDS control_toolbox controller_interface dynamic_reconfigure geometry_msgs hardware_interface pluginlib realtime_tools roscpp sensor_msgs std_msgs tf
-#  DEPENDS system_lib
+        INCLUDE_DIRS
+        include
+        ## This is only necessary because Eigen3 sets a non-standard EIGEN3_INCLUDE_DIR variable
+        #        ${EIGEN3_INCLUDE_DIR}
+        LIBRARIES
+        CATKIN_DEPENDS
+        roscpp
+        controller_interface
+        hardware_interface
+        pluginlib
+        control_toolbox
+        dynamic_reconfigure
+        std_msgs
+        realtime_tools
+        geometry_msgs
+        tf
+        DEPENDS
+        ## find_package(Eigen3) provides a non standard EIGEN3_INCLUDE_DIR instead of Eigen3_INCLUDE_DIRS.
+        ## Therefore, the DEPEND does not work as expected and we need to add the directory to the INCLUDE_DIRS
+        # Eigen3
+
+        ## Boost is not part of the DEPENDS since it is only used in source files,
+        ## Dependees do not depend on Boost when they depend on this package.
 )
 
 ###########
@@ -126,12 +145,13 @@ catkin_package(
 include_directories(
 # include
   ${catkin_INCLUDE_DIRS}
+  ./include/learning_task2/
 )
 
 ## Declare a C++ library
-# add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/learning_task2.cpp
-# )
+add_library(${PROJECT_NAME}
+        src/power_machine_controller.cpp
+)
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
@@ -151,12 +171,13 @@ include_directories(
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
-# add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-
+add_dependencies(${PROJECT_NAME}
+        ${catkin_EXPORTED_TARGETS}
+)
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(${PROJECT_NAME}_node
-#   ${catkin_LIBRARIES}
-# )
+target_link_libraries(${PROJECT_NAME}
+        ${catkin_LIBRARIES}
+)
 
 #############
 ## Install ##

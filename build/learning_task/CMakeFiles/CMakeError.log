@@ -1,21 +1,21 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/hyd/Learning_task/build/learning_task/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_dec0b/fast && /usr/bin/make -f CMakeFiles/cmTC_dec0b.dir/build.make CMakeFiles/cmTC_dec0b.dir/build
+Run Build Command(s):/usr/bin/make cmTC_64dfd/fast && /usr/bin/make -f CMakeFiles/cmTC_64dfd.dir/build.make CMakeFiles/cmTC_64dfd.dir/build
 make[1]: 进入目录“/home/hyd/Learning_task/build/learning_task/CMakeFiles/CMakeTmp”
-Building C object CMakeFiles/cmTC_dec0b.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_dec0b.dir/src.c.o   -c /home/hyd/Learning_task/build/learning_task/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_dec0b
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dec0b.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_dec0b.dir/src.c.o  -o cmTC_dec0b 
-/usr/bin/ld: CMakeFiles/cmTC_dec0b.dir/src.c.o: in function `main':
+Building C object CMakeFiles/cmTC_64dfd.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_64dfd.dir/src.c.o   -c /home/hyd/Learning_task/build/learning_task/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_64dfd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_64dfd.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_64dfd.dir/src.c.o  -o cmTC_64dfd 
+/usr/bin/ld: CMakeFiles/cmTC_64dfd.dir/src.c.o: in function `main':
 src.c:(.text+0x46): undefined reference to `pthread_create'
 /usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
 /usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_dec0b.dir/build.make:87：cmTC_dec0b] 错误 1
+make[1]: *** [CMakeFiles/cmTC_64dfd.dir/build.make:87：cmTC_64dfd] 错误 1
 make[1]: 离开目录“/home/hyd/Learning_task/build/learning_task/CMakeFiles/CMakeTmp”
-make: *** [Makefile:121：cmTC_dec0b/fast] 错误 2
+make: *** [Makefile:121：cmTC_64dfd/fast] 错误 2
 
 
 Source file was:
@@ -41,18 +41,18 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/hyd/Learning_task/build/learning_task/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_35c46/fast && /usr/bin/make -f CMakeFiles/cmTC_35c46.dir/build.make CMakeFiles/cmTC_35c46.dir/build
+Run Build Command(s):/usr/bin/make cmTC_734a6/fast && /usr/bin/make -f CMakeFiles/cmTC_734a6.dir/build.make CMakeFiles/cmTC_734a6.dir/build
 make[1]: 进入目录“/home/hyd/Learning_task/build/learning_task/CMakeFiles/CMakeTmp”
-Building C object CMakeFiles/cmTC_35c46.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_35c46.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
-Linking C executable cmTC_35c46
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_35c46.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_35c46.dir/CheckFunctionExists.c.o  -o cmTC_35c46  -lpthreads 
+Building C object CMakeFiles/cmTC_734a6.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_734a6.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_734a6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_734a6.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_734a6.dir/CheckFunctionExists.c.o  -o cmTC_734a6  -lpthreads 
 /usr/bin/ld: 找不到 -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_35c46.dir/build.make:87：cmTC_35c46] 错误 1
+make[1]: *** [CMakeFiles/cmTC_734a6.dir/build.make:87：cmTC_734a6] 错误 1
 make[1]: 离开目录“/home/hyd/Learning_task/build/learning_task/CMakeFiles/CMakeTmp”
-make: *** [Makefile:121：cmTC_35c46/fast] 错误 2
+make: *** [Makefile:121：cmTC_734a6/fast] 错误 2
 
 
 
