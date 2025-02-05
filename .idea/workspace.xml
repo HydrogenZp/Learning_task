@@ -19,7 +19,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="901fcd35-48a1-4199-aa05-631f18313864" name="更改" comment="Fix package errors." />
+    <list default="true" id="901fcd35-48a1-4199-aa05-631f18313864" name="更改" comment="Fix package errors.">
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/learning_task/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/learning_task/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/learning_task/catkin_generated/setup_cached.sh" beforeDir="false" afterPath="$PROJECT_DIR$/build/learning_task/catkin_generated/setup_cached.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/learning_task/build.cmake.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/learning_task/build.cmake.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/learning_task/build.make.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/learning_task/build.make.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/learning_task/build.symlink.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/learning_task/build.symlink.log" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,6 +86,7 @@
       <workItem from="1738418366909" duration="96000" />
       <workItem from="1738418513862" duration="160000" />
       <workItem from="1738418680322" duration="385000" />
+      <workItem from="1738477391340" duration="210000" />
     </task>
     <task id="LOCAL-00001" summary="Upload the workspace to a GitHub repository instead of a package.">
       <option name="closed" value="true" />

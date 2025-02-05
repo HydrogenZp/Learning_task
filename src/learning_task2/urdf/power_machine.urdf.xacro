@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="pole_machine">
+  <xacro:property name="pole_radius" value="0.2"/>
+  <xacro:property name="pole_length" value="5"/>
+  <xacro:property name="PI" value="3.14159265358979323846"/>
+
+  <!-- Base link -->
+  <link name="base_link">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </link>
+
+  <!-- Pole link: 竖直的圆柱体 -->
+  <link name="pole_link">
+    <visual>
+      <geometry>
+        <cylinder length="${pole_length}" radius="${pole_radius}"/>
+      </geometry>
+      <material name="white">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+      <!-- 将圆柱体底部放在 z=0 -->
+      <origin xyz="0 0 ${pole_length/2}" rpy="0 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="${pole_length}" radius="${pole_radius}"/>
+      </geometry>
+      <origin xyz="0 0 ${pole_length/2}" rpy="0 0 0"/>
+    </collision>
+    <inertial>
+      <mass value="50.0"/>
+      <origin xyz="0 0 ${pole_length/2}" rpy="0 0 0"/>
+      <inertia ixx="1.0" ixy="0" ixz="0" iyy="1.0" iyz="0" izz="1.0"/>
+    </inertial>
+  </link>
+
+  <!-- Motor link：电机主体，模型为一根0.5 m长的圆柱体。
+       为使电机的长轴与 x 轴对齐，对其应用了绕 Y 轴旋转 PI/2 -->
+  <link name="motor_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 ${PI/2} 0"/>
+      <geometry>
+        <cylinder radius="0.1" length="0.5"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 ${PI/2} 0"/>
+      <geometry>
+        <cylinder radius="0.1" length="0.5"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1.0"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+  </link>
+
+  <!-- Bar link：在电机前方添加一根杆子，
+       杆子以圆柱体表示，长度为1.0 m，半径为0.05 m。
+       为使连接点处于杆子的一端，将杆子的视觉和碰撞坐标系平移，使其中心位于 (0.5,0,0) -->
+  <link name="bar_link">
+    <visual>
+      <origin xyz="0.2 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder length="4.0" radius="0.05"/>
+      </geometry>
+      <material name="gray">
+        <color rgba="0.5 0.5 0.5 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.2 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder length="4.0" radius="0.05"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="10"/>
+      <origin xyz="0.2 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <!-- 连接关节 -->
+
+  <!-- 固定连接 base_link 与 pole_link -->
+  <joint name="pole_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="pole_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <!-- 电机连续关节：连接 pole_link 与 motor_link，
+       此处根据实际需要调整电机相对于杆体的位置 -->
+  <joint name="motor_joint" type="fixed">
+    <parent link="pole_link"/>
+    <child link="motor_link"/>
+    <!-- 此处将电机放置于 pole_link 上的某个偏移位置，可按实际设计调整 -->
+    <origin xyz="0.2 0 ${pole_length - 0.25}" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+  </joint>
+
+  <!-- 杆子关节：连接 motor_link 与 bar_link，
+       关节原点设置在 motor_link 的前端（电机长度 0.5 m，其前端大约位于 x=+0.25），
+       采用连续关节以允许杆子绕该点旋转（此处旋转轴设置为 z 轴，可根据需要调整） -->
+  <joint name="bar_joint" type="continuous">
+    <parent link="motor_link"/>
+    <child link="bar_link"/>
+    <origin xyz="0.0 0 0" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+  </joint>
+
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/</robotNamespace>
+    </plugin>
+  </gazebo>
+</robot>
