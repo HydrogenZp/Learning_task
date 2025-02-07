@@ -1,0 +1,16 @@
+controller:
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+  power_machine_controller:
+    type: power_machine_controller/PowerMachineController
+    publish_rate: 50
+    pid:
+      p: 50.0    # 位置比例增益
+      i: 0.01    # 积分增益，设置较小以避免积分饱和
+      d: 5.0     # 微分增益，用于抑制超调
+    joints:
+      - bar_joint   # 控制的关节名称
+    constraints:
+      effort_limit: 100.0   # 力矩限制
+      velocity_limit: 10.0  # 速度限制（rad/s）

@@ -1,0 +1,11 @@
+<library path="lib/libpower_machine_controller">
+
+    <class name="power_machine_controller/PowerMachineController"
+           type="power_machine_controller::PowerMachineController"
+           base_class_type="controller_interface::ControllerBase">
+        <description>
+            This class is a controller that controls the power of a machine.
+        </description>
+    </class>
+
+</library>

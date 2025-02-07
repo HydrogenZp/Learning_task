@@ -116,7 +116,7 @@ if(NOT "/home/hyd/Learning_task/src/learning_task2/include " STREQUAL " ")
   endforeach()
 endif()
 
-set(libraries "")
+set(libraries "power_machine_controller")
 foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
