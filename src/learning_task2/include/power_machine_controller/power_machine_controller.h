@@ -28,7 +28,9 @@ private:
   
   hardware_interface::JointHandle motor_joint_;  // 关节句柄
   ros::Subscriber sub_command_;  // 命令订阅器
-  
+  ros::Publisher desired_spd_publisher_;
+  ros::Publisher error_publisher_;
+
   double command_;  // 存储最新的命令值
   
   control_toolbox::Pid pid_controller_;  // PID控制器
@@ -38,7 +40,12 @@ private:
   double i_gain_;
   double d_gain_;
 
+  //前馈参数
+  double k_gain_;
+
   double spd;
+  double error;
+
   double a,b,omega;
 
   double record_time_;
