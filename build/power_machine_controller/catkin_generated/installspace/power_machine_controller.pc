@@ -1,8 +1,0 @@
-prefix=/home/hyd/Learning_task/install
-
-Name: power_machine_controller
-Description: Description of power_machine_controller
-Version: 0.0.0
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib -lpower_machine_controller
-Requires: roscpp controller_interface hardware_interface pluginlib control_toolbox dynamic_reconfigure std_msgs realtime_tools geometry_msgs tf

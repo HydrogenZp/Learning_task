@@ -1,5 +1,0 @@
-learning_task
-/home/hyd/Learning_task/devel/.private/learning_task/cmake.lock /home/hyd/Learning_task/devel/./cmake.lock
-/home/hyd/Learning_task/devel/.private/learning_task/lib/pkgconfig/learning_task.pc /home/hyd/Learning_task/devel/lib/pkgconfig/learning_task.pc
-/home/hyd/Learning_task/devel/.private/learning_task/share/learning_task/cmake/learning_taskConfig.cmake /home/hyd/Learning_task/devel/share/learning_task/cmake/learning_taskConfig.cmake
-/home/hyd/Learning_task/devel/.private/learning_task/share/learning_task/cmake/learning_taskConfig-version.cmake /home/hyd/Learning_task/devel/share/learning_task/cmake/learning_taskConfig-version.cmake

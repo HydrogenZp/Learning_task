@@ -1,6 +1,0 @@
-learning_task2
-/home/hyd/Learning_task/devel/.private/power_machine_controller/cmake.lock /home/hyd/Learning_task/devel/./cmake.lock
-/home/hyd/Learning_task/devel/.private/power_machine_controller/lib/libpower_machine_controller.so /home/hyd/Learning_task/devel/lib/libpower_machine_controller.so
-/home/hyd/Learning_task/devel/.private/power_machine_controller/lib/pkgconfig/power_machine_controller.pc /home/hyd/Learning_task/devel/lib/pkgconfig/power_machine_controller.pc
-/home/hyd/Learning_task/devel/.private/power_machine_controller/share/power_machine_controller/cmake/power_machine_controllerConfig.cmake /home/hyd/Learning_task/devel/share/power_machine_controller/cmake/power_machine_controllerConfig.cmake
-/home/hyd/Learning_task/devel/.private/power_machine_controller/share/power_machine_controller/cmake/power_machine_controllerConfig-version.cmake /home/hyd/Learning_task/devel/share/power_machine_controller/cmake/power_machine_controllerConfig-version.cmake

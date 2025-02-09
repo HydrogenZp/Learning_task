@@ -1,1 +1,0 @@
-/home/hyd/Learning_task/devel/.private/catkin_tools_prebuild/local_setup.sh
