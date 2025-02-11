@@ -1,0 +1,3 @@
+/home/hyd/Learning_task/src/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-byRrgx/CMakeFiles/cmTC_5bef2.dir
+/home/hyd/Learning_task/src/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-byRrgx/CMakeFiles/edit_cache.dir
+/home/hyd/Learning_task/src/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-byRrgx/CMakeFiles/rebuild_cache.dir
