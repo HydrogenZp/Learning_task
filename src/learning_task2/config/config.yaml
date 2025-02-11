@@ -6,11 +6,11 @@ controller:
     type: power_machine_controller/PowerMachineController
     publish_rate: 50
     pid:
-      p: 100000   # 位置比例增益
+      p: 100   # 位置比例增益
       i: 1    # 积分增益，设置较小以避免积分饱和
       d: 0     # 微分增益，用于抑制超调
     feedforward:
-      k: 100000
+      k: 5000
     joints:
       - bar_joint   # 控制的关节名称
     constraints:

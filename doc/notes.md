@@ -11,3 +11,4 @@
 
 - [在Ubuntu中配置Zsh](./在Ubuntu中使用Zsh.md)
 
+- [前馈+PID控制风车](./前馈+PID.md)

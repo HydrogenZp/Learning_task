@@ -31,10 +31,19 @@ private:
   ros::Publisher desired_spd_publisher_;
   ros::Publisher error_publisher_;
 
+  // 新增：前馈模式订阅者
+  ros::Subscriber sub_feedforward_mode_;
+
+  // 新增：前馈模式启用标志
+  bool feedforward_enabled_;
+
   double command_;  // 存储最新的命令值
-  
+
+  // 前馈模式回调函数
+  void feedforwardModeCallback(const std_msgs::Float64::ConstPtr& msg);
+
   control_toolbox::Pid pid_controller_;  // PID控制器
-  
+
   // PID参数
   double p_gain_;
   double i_gain_;
@@ -50,6 +59,9 @@ private:
 
   double record_time_;
   double last_command_;
+
+  // 新增：记录上一次日志输出时间
+  double last_log_time_;
 };
 
 }  // namespace power_machine_controller
