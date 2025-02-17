@@ -124,7 +124,7 @@ namespace power_machine_controller {
             // 前馈控制：直接使用误差乘以前馈增益
             double uff = k_gain_ * error;
             double effort = pid_controller_.computeCommand(error, period);
-            motor_joint_.setCommand(uff + error);
+            motor_joint_.setCommand(uff + effort);
 
             // 限制日志输出频率
             double current_time = ros::Time::now().toSec();
