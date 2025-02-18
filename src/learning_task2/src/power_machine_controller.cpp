@@ -102,10 +102,18 @@ namespace power_machine_controller {
     void PowerMachineController::computeEfforts(const ros::Time &time, const ros::Duration &period) {
         // 计算当前时间点的目标速度
         double t = time.toSec(); // 获取当前时间（秒）
-        spd = a * sin(omega * (t - record_time_)) + b;
         if (command_ == 0) {
             spd = 0;
         }
+        else if (command_ == 2)
+        {
+          spd= 1.047;
+        }
+        else
+        {
+          spd = a * sin(omega * (t - record_time_)) + b;
+        }
+
         // 获取当前速度
         double current_velocity = motor_joint_.getVelocity();
 

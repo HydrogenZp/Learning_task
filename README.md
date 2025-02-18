@@ -22,11 +22,17 @@
 
 ### 前馈+PID控制输出图像
 
-前面为使用前馈，后面为关闭前馈
+在仿真中：前面为使用前馈，后面为关闭前馈
 <img src="./imgs/ff_and_pid.png" alt="ff_and_pid" style="zoom: 50%;" />
+
+<img src="./imgs/motor.jpg" style="zoom:50%;" />
 
 ### 订阅的话题消息含义
 
-`command`：取值0或1，风车是否转动（为1时转动）
+`command`：
+
+- `command` == 0 ：停止转动
+- `command` == 1 ：大符
+- `command` == 2 ：小符
 
 `feedforward_mode`: 取值0或1，是否使用前馈（为1时使用前馈）。为方便调试，没有使用在yaml中配置是否使用前馈的方法
