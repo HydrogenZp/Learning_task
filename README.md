@@ -25,6 +25,8 @@
 在仿真中：前面为使用前馈，后面为关闭前馈
 <img src="./imgs/ff_and_pid.png" alt="ff_and_pid" style="zoom: 50%;" />
 
+电机：
+
 <img src="./imgs/motor.jpg" style="zoom:50%;" />
 
 ### 订阅的话题消息含义
