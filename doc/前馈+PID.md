@@ -21,6 +21,7 @@
 
 在实际电机中：
 
-下图为pid时的jointstate图像。用的电机实在太烂，转动的时候会卡顿，导致jointstates数据有尖刺，使用前馈时导致$u_{ff}$太大，一直抖动
+开启前馈后响应更快
 
 ![](../imgs/motor.jpg)
+![](../imgs/pid_compare.jpg)
